@@ -1,1 +1,112 @@
 <h1>My project</h1>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<!DOCTYPE html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Butcherman" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<script src="/assets/jquery.js"></script>
+<style>
+body {
+  text-align:center;
+  font-family: 'Butcherman', cursive;
+  font-size: 20px;
+  background: url("https://i.ytimg.com/vi/AtGTot98UAo/maxresdefault.jpg");
+  background-size: cover;
+  background-position: 63%;
+}
+ img {
+      margin: 40px 0px 0px 0px;
+      border: dotted;
+      border-radius: 10000px; 
+ 
+}
+button {
+  margin:70px;
+  color:#C11B17;
+  border: outset;
+  font-family: 'Blck Ops One', cursive;
+  font-size:24px
+}
+input {
+  font-size: 44px;
+  border: double;
+  font-family: 'Kaushan Script', cursive;
+  position: relative;
+  color: blue;
+}
+.fill {
+  background: #D1D0CE;
+  color: #C11B17;
+  border-bottom: 2px white solid;
+  font-family: 'VT323', monospace;
+  padding: 0 6px;
+  margin: 4px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="prompt"></div>
+<button>Next</button>
+<script>
+// List of prompts for the user
+var prompts = [
+	'Type your name',
+	'Type a verb',
+	'Type a sound',
+	'Type the previous name again',
+	'Type the previous name again',
+	'Type the sound again',
+	'Type a kitchen utensil',
+	'Type a name',
+	
+   ];
+
+var answers=[];
+// Keep track of current prompt we're on
+var currentPrompt = 0;
+
+// A function that will call the next prompt
+var nextPrompt = function() {
+  //if there's no answer in the form
+  if (currentPrompt != 0){
+    answers.push($('input').val());
+  }
+	// if there is a next prompt
+	if (currentPrompt < prompts.length) {
+		// put first prompt in all html elements with class 
+		$('.prompt').html(prompts[currentPrompt] +'<br><input type="text">');
+		// move the next prompt into variable currentPrompt 
+		currentPrompt = currentPrompt + 1;
+	}
+	//or else if we're at the end of the array
+	else {
+		// put a new message into the html.
+		showFinal();
+	}
+}
+
+//puts user answers into HTML
+var showFinal = function() {
+  $('.prompt').html('Once upon a time <span class="fill">'+answers[0]+'</span> was <span class="fill">'+answers[1]+'</span> in the living room and then all of a suddden he/she heard a<span class="fill">'+answers[2]+'</span>. <span class="fill">'+answers[3]+'</span> body was filled with trepidion.<span class="fill">'+answers[4]+'</span> heard the<span class="fill">'+answers[5]+'</span> again and this time he/she ran towards the kitchen and grabbed a <span class="fill">'+answers[6]+'</span>. He/she tried to call <span class="fill">'+answers[7]+'</span> and they did not pick up. They heard the door knob turn and stepped back. ');
+  //and then hide the button
+  $('button').hide();
+}
+// run nextPrompt function when button is clicked
+$('button').click(function() {
+	nextPrompt();
+});
+
+// Show the first prompt as soon as js loads
+nextPrompt();
+</script>
+
+it was a cold and blank night. my friends and i were on our way blank to meet up. howeveer, little did i know that this was going to be a night that i would never forget! WE were approching the abondon house which was on the corner of blank street. We all had heard ruomors that his house was abandoned. The windows were all broken. I gulped and was thinking to stop this adventure. Howver I did not want to look like a scared cat and wuss out. therefore, I followed all my other friiendsa and we stood in front of the long rusti old doors. We took out our flashlights and 
+
+</body>
