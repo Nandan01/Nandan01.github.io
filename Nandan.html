@@ -1,112 +1,148 @@
-<h1>My project</h1>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css?family=Butcherman" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-<script src="/assets/jquery.js"></script>
-<style>
-body {
-  text-align:center;
-  font-family: 'Butcherman', cursive;
-  font-size: 20px;
-  background: url("https://i.ytimg.com/vi/AtGTot98UAo/maxresdefault.jpg");
-  background-size: cover;
-  background-position: 63%;
-}
- img {
-      margin: 40px 0px 0px 0px;
-      border: dotted;
-      border-radius: 10000px; 
- 
-}
-button {
-  margin:70px;
-  color:#C11B17;
-  border: outset;
-  font-family: 'Blck Ops One', cursive;
-  font-size:24px
-}
-input {
-  font-size: 44px;
-  border: double;
-  font-family: 'Kaushan Script', cursive;
-  position: relative;
-  color: blue;
-}
-.fill {
-  background: #D1D0CE;
-  color: #C11B17;
-  border-bottom: 2px white solid;
-  font-family: 'VT323', monospace;
-  padding: 0 6px;
-  margin: 4px;
-}
-</style>
+  <title>Wedding Planner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    body {
+		background: url("http://freedesignfile.com/upload/2017/04/Wedding-ring-with-pink-background-HD-picture.jpg");
+		background-size: 90% 80%;
+	}
+	.jumbotron {
+	      background-color: #f4511e;
+	      color: #fff;
+		  background: url("http://freedesignfile.com/upload/2017/04/Wedding-ring-with-pink-background-HD-picture.jpg");
+	  }
+	
+	.sidenav {
+      background:   url("https://previews.123rf.com/images/tatom/tatom1505/tatom150500181/40497498-close-up-handmade-rose-flower-backdrop.jpg`");
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #FDD7E4;
+      color: white;
+      padding: 15px;
+	  font-family: 'Playball', cursive;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="prompt"></div>
-<button>Next</button>
-<script>
-// List of prompts for the user
-var prompts = [
-	'Type your name',
-	'Type a verb',
-	'Type a sound',
-	'Type the previous name again',
-	'Type the previous name again',
-	'Type the sound again',
-	'Type a kitchen utensil',
-	'Type a name',
-	
-   ];
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Nandan's Blog</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Home</a></li>
+        <li><a href="http://www.empirecake.com/wedding-cakes-favors/">Cake</a></li>
+		<li><a href="https://www.thewindsorflorist.com/">Flowers</a></li>
+        <li><a href="http://www.davidsbridal.com/">Dresses & Suits</a></li>
+        <li><a href="https://www.bunndjcompany.com/">Entertainment</a></li>
+		<li><a href="https://www.theknot.com/marketplace/catering-new-york-ny">Catering</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+	<div class="jumbotron text-center">
+  	  <h1>Company</h1> 
+ 	 <p>We specialize in blablabla</p> 
+	</div>
 
-var answers=[];
-// Keep track of current prompt we're on
-var currentPrompt = 0;
+    <div class="col-sm-9">
 
-// A function that will call the next prompt
-var nextPrompt = function() {
-  //if there's no answer in the form
-  if (currentPrompt != 0){
-    answers.push($('input').val());
-  }
-	// if there is a next prompt
-	if (currentPrompt < prompts.length) {
-		// put first prompt in all html elements with class 
-		$('.prompt').html(prompts[currentPrompt] +'<br><input type="text">');
-		// move the next prompt into variable currentPrompt 
-		currentPrompt = currentPrompt + 1;
-	}
-	//or else if we're at the end of the array
-	else {
-		// put a new message into the html.
-		showFinal();
-	}
-}
+	    
+	    <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>Food</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Nandan Kaur, March 16, 2018.</h5>
+      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><br>
+      
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>Officially Blogging</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
+      <h5><span class="label label-success">Lorem</span></h5><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
 
-//puts user answers into HTML
-var showFinal = function() {
-  $('.prompt').html('Once upon a time <span class="fill">'+answers[0]+'</span> was <span class="fill">'+answers[1]+'</span> in the living room and then all of a suddden he/she heard a<span class="fill">'+answers[2]+'</span>. <span class="fill">'+answers[3]+'</span> body was filled with trepidion.<span class="fill">'+answers[4]+'</span> heard the<span class="fill">'+answers[5]+'</span> again and this time he/she ran towards the kitchen and grabbed a <span class="fill">'+answers[6]+'</span>. He/she tried to call <span class="fill">'+answers[7]+'</span> and they did not pick up. They heard the door knob turn and stepped back. ');
-  //and then hide the button
-  $('button').hide();
-}
-// run nextPrompt function when button is clicked
-$('button').click(function() {
-	nextPrompt();
-});
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>Me too! WOW!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-// Show the first prompt as soon as js loads
-nextPrompt();
-</script>
-
-it was a cold and blank night. my friends and i were on our way blank to meet up. howeveer, little did i know that this was going to be a night that i would never forget! WE were approching the abondon house which was on the corner of blank street. We all had heard ruomors that his house was abandoned. The windows were all broken. I gulped and was thinking to stop this adventure. Howver I did not want to look like a scared cat and wuss out. therefore, I followed all my other friiendsa and we stood in front of the long rusti old doors. We took out our flashlights and 
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
 
 </body>
+</html>
+
+     
+  
